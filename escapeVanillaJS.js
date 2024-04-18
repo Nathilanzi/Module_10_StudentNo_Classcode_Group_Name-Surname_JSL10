@@ -19,18 +19,30 @@ document.getElementById("solveRoom2").addEventListener("click", () => {
     document.getElementById("room2Result").textContent = `The code to unlock the door is: ${Array.from(commonConcepts).join(', ')}`;
 });
 
-    // 🪲 Bug: Asynchronous function ?
-    document.getElementById("solveRoom3").addEventListener("click", () => {
-        fetch('directions.json') 
-            .then(response => response.json())
-            .then(directions => {
-                navigateLabyrinth(directions)
-                    .then(message => {
-                        // 🪲 Bug: Incorrect method
-                        document.getElementById("room3Result").innerHTML = message;
-                    });
-            });
-    });
+// 🪲 Bug: Asynchronous function ?
+document.getElementById("solveRoom3").addEventListener("click", async () => {
+    try {
+        // Fetch data from 'directions.json'
+        const response = await fetch('directions.json');
+
+        // Check if the fetch was successful
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        // Parse the response as JSON
+        const directions = await response.json();
+
+        // Navigate the labyrinth using the fetched directions
+        const message = await navigateLabyrinth(directions);
+
+        // 🪲 Bug: Incorrect method
+        // Update the innerHTML of the element with id 'room3Result'
+        document.getElementById("room3Result").textContent = message;
+    } catch (error) {
+        // Log any errors that occur during the fetch or navigation process
+        console.error('Error:', error);
+    }
 });
 
 function findMostRecentBook(books) {
