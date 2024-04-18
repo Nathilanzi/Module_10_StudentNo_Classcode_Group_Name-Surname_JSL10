@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-   document.getElementById("solveRoom2").addEventListener("click", () => {
+document.getElementById("solveRoom2").addEventListener("click", () => {
     const jsConcepts = new Set(['closure', 'scope', 'hoisting']);
     const reactConcepts = new Set(['components', 'jsx', 'hooks', 'async']);
     // Fix: Correct function call
