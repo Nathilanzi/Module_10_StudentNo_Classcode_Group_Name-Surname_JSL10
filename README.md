@@ -1,46 +1,29 @@
-# [JSL10] Submission: Escaping Vanilla JS: Abstraction Challenge
+Room Solver
+This code provides solutions for three different rooms in a game. Each room has a unique challenge that requires JavaScript knowledge to solve.
 
-You will:
-1. Use the provided Starter Code Repository: https://github.com/CodeSpace-Academy/Module_10_StudentNo_Classcode_Group_Name-Surname_JSL10
-2. Code your solution.
-3. Commit changes to your GitHub repository.
-4. Submit the GitHub Repository Link to the LMS [JSL10] Submission Project Tab.
+Room 1
+To solve Room 1, the player needs to find the most recent book from a list of books. The solution code fetches the list of books from a JSON file, finds the most recent book using the findMostRecentBook function, and displays the title of the book in the DOM.
 
-The Escape Vanilla JS Challenge is an interactive web-based project focusing on debugging skills, problem-solving, and the concept of abstraction. You will navigate through three themed "rooms," each presenting a unique challenge that requires them to debug and correct given JavaScript code to proceed. This adventure is themed around escaping the confines of Vanilla JavaScript to advance towards learning React.
+Functions
+findMostRecentBook: This function takes an array of books as an argument and returns the most recent book based on the published property.
+Room 2
+To solve Room 2, the player needs to find the common concepts between JavaScript and React. The solution code creates two sets of concepts, finds the intersection using the findIntersection function, and displays the common concepts in the DOM.
 
-![alt text](<[JSL10 Solution].gif>)
+Functions
+findIntersection: This function takes two sets as arguments and returns a new set containing the intersection of the two sets.
+Room 3
+To solve Room 3, the player needs to navigate a labyrinth using a set of directions. The solution code fetches the directions from a JSON file, navigates the labyrinth using the navigateLabyrinth function, and displays a message in the DOM upon successful completion.
 
-## What You Need to Do:
+Functions
+navigateLabyrinth: This function takes an array of directions as an argument and navigates the labyrinth by logging each step in the console and returning a success message upon completion.
+Usage
+To use the code, include it in an HTML file and attach it to the DOM using the DOMContentLoaded event. The code will attach event listeners to the elements with the IDs solveRoom1, solveRoom2, and solveRoom3. When the player clicks on these elements, the corresponding room will be solved.
 
-1. Clone the provided Starter Code Repository to your local development environment (e.g., VSCode): https://github.com/CodeSpace-Academy/Module_10_StudentNo_Classcode_Group_Name-Surname_JSL10
-2. Open the cloned project in your code editor.
-3. Code your solution for each of the challenges as per the provided instructions.
-4. Commit your changes to your local Git repository with meaningful commit messages.
-5. Push your local Git repository to your GitHub account.
-6. Verify that the changes have been successfully pushed to your GitHub repository.
-
-#### Debugging Tasks
-
-1. **Correct the ID used in the event listener for Room 1.**
-2. **Use the correct element ID when displaying results for Room 1.**
-3. **Add the missing 'async' keyword to the JS concepts set.**
-4. **Correct the function call to find the intersection of `jsConcepts` and `reactConcepts` for Room 2.**
-5. **Ensure asynchronous operations are handled correctly in Room 3, particularly by adding `await` before the promise in `navigateLabyrinth`.**
-6. **Adjust the `findMostRecentBook` function to correctly compare dates and find the most recent book.**
-7. **Fix the `findIntersection` function to correctly determine the intersection of two sets.**
-8. **Add the `await` keyword before `new Promise` in `navigateLabyrinth` to ensure the simulation of asynchronous operations works as intended.**
-
-## What You Need to Include:
-
-1. Ensure that your code includes the necessary modifications to meet the challenge requirements.
-2. Your GitHub repository should contain the updated code files.
-
-## How We'll Assess Your Work:
-
-1. We will review your GitHub repository to ensure that it contains the updated code files.
-2. We will assess the modifications made to the code to verify that they effectively meet the challenge requirements.
-3. We will consider the commit history and meaningful commit messages to evaluate your coding process.
-
-
-
-
+Notes
+The code uses the fetch API to fetch data from JSON files.
+The code uses the Set object to store unique values.
+The code uses the reduce method to find the most recent book.
+The code uses the filter method to find the intersection of two sets.
+The code uses the Promise object to create a delay.
+The code uses the textContent and innerHTML properties to update the DOM.
+The code uses the console.error method to log errors.
